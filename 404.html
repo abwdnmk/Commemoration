@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>404</title>
+  <script>
+    // 核心逻辑：把 404 的路径重定向到首页，并保留原路由
+    const path = window.location.pathname;
+    // 提取仓库名后的路由路径（比如 /Commemoration/message-board → /message-board）
+    const routePath = path.replace('/Commemoration/', '') || '/';
+    // 跳转到首页，并把路由路径拼到 hash 里
+    window.location.href = '/Commemoration/' + '#' + routePath;
+  </script>
+</head>
+<body></body>
+</html>
